@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+.card {
+  max-width: 750px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "first first"
+    "second third";
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  margin: 0 30px;
+}
+.card .box {
+  padding: 45px;
+}
+.card .box:nth-child(1) {
+  grid-area: first;
+  background-color: white;
+}
+.card .box:nth-child(1) p:first-child {
+  font-weight: 700;
+  color: var(--cyan);
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+.card .box:nth-child(1) p:nth-child(2) {
+  color: var(--bright-yellow);
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.card .box:nth-child(1) p:last-child {
+  color: var(--grayish-blue);
+  line-height: 1.7;
+  max-width: 600px;
+}
+.card .box:nth-child(2) {
+  grid-area: second;
+  background-color: var(--cyan);
+  color: white;
+}
+.card .box:nth-child(2) p:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.card .box:nth-child(2) p:nth-child(2) {
+  color: var(--light-gray);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.card .box:nth-child(2) p:nth-child(2) span {
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 10px;
+  color: white;
+}
+.card .box:nth-child(2) p:nth-child(3) {
+  margin-bottom: 35px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.card .box:nth-child(2) p:nth-child(4) {
+  text-align: center;
+  background-color: var(--bright-yellow);
+  padding: 16px 0;
+  border-radius: 6px;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.card .box:nth-child(3) {
+  grid-area: third;
+  background-color: #4abebd;
+  color: var(--light-gray);
+}
+.card .box:nth-child(3) p:first-child {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 18px;
+}
+.card .box:nth-child(3) p:not(:first-child) {
+  line-height: 1.4;
+}
+@media (max-width: 585px) {
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "first"
+      "second"
+      "third";
+    margin: 80px 30px;
+  }
+  .card .box {
+    padding: 25px;
+  }
+  .card .box:nth-child(1) p:nth-child(2) {
+    margin-bottom: 20px;
+  }
+  .card .box:nth-child(1) p:last-child {
+    margin-bottom: 10px;
+  }
+}
