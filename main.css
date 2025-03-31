@@ -21,7 +21,7 @@ body {
   align-items: center;
 }
 .card {
-  max-width: 750px;
+  max-width: 740px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
