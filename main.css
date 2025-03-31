@@ -55,7 +55,7 @@ body {
 .card .box:nth-child(1) p:last-child {
   color: var(--grayish-blue);
   line-height: 1.7;
-  max-width: 600px;
+  max-width: 580px;
 }
 .card .box:nth-child(2) {
   grid-area: second;
